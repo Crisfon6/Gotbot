@@ -1,0 +1,22 @@
+1655411313588	geckodriver	INFO	Listening on 127.0.0.1:54888
+1655411314026	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54889" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/44/1tt4k8ts7t971j15mrfb2mq40000gn/T/rust_mozprofileRImkwP"
+2022-06-16 15:28:34.739 plugin-container[93022:2097307] nil host used in call to allowsSpecificHTTPSCertificateForHost
+1655411314741	Marionette	INFO	Marionette enabled
+2022-06-16 15:28:34.760 plugin-container[93022:2097307] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-06-16 15:28:34.815 plugin-container[93022:2097307] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-16 15:28:34.815 plugin-container[93022:2097307] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-06-16 15:28:34.815 plugin-container[93022:2097309] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-16 15:28:34.815 plugin-container[93022:2097309] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://localhost:54889
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/44/1tt4k8ts7t971j15mrfb2mq40000gn/T/rust_mozprofileRImkwP/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1655411316201	Marionette	INFO	Listening on port 54900
+DevTools listening on ws://localhost:54889/devtools/browser/c0de1dad-bb8f-496e-878a-47466933bb61
+Read port: 54900
+1655411316233	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+1655411318468	Marionette	INFO	Stopped listening on port 54900
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
