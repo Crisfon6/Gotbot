@@ -7,7 +7,7 @@ RUN apt install wget -y
 # install chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb
-# install python
+# install python3  and pip
 RUN apt-get install -y python3-pip
 RUN pip install --upgrade pip
 
