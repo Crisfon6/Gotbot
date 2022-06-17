@@ -1,9 +1,24 @@
-FROM python:alpine
-
-COPY requirements.txt /tmp/requirements.txt
+FROM ubuntu
+# update system
+RUN apt-get update
+RUN apt upgrade -y
+# install wget
+RUN apt install wget -y
+# install chrome
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN dpkg -i google-chrome-stable_current_amd64.deb
+# install python
+RUN apt-get install -y python3-pip
 RUN pip install --upgrade pip
+
+
+# install dependencies
+COPY requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
+# copy source code
 COPY src /src
 
-ENTRYPOINT [ "python","main.py" ]
+# run application
+ENTRYPOINT [ "python","/src/main.py" ]
+

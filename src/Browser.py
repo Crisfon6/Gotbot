@@ -61,10 +61,7 @@ class Browser:
                 .send_keys(Keys.ENTER).perform() 
             ActionChains(self.driver)\
                 .send_keys(Keys.ENTER).perform() 
-             
-            # msg = self.driver.find_element_by_id('gotdibs-reservation-messagee')
-            # if(msg.text=="Your vehicle has been reserved, the dealer will contact you shortly"):
-            #     success= True            
+                      
             try:
                 WebDriverWait(self.driver,35).until(EC.text_to_be_present_in_element(
             (By.ID,
