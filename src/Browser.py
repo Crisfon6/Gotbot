@@ -1,23 +1,30 @@
-from argparse import Action
-from lib2to3.pgen2 import driver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-import random
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from time import sleep
 
 class Browser:
-    def __init__(self,driver_path,base_url):
+    def __init__(self,driver_path,base_url,docker=True):
         self.driver_path = driver_path
         self.base_url = base_url
-        self.setup_browser()
+        self.setup_browser(docker)
         
 
-    def setup_browser(self):
-        self.driver = webdriver.Chrome(executable_path=self.driver_path)
+    def setup_browser(self,docker):
+        try:
+            if(docker):
+                print('DOCKER')
+                self.driver = webdriver.Remote('http://localhost:4444/wd/hub',desired_capabilities=DesiredCapabilities.CHROME)
+            else:
+                print('No docker')
+                self.driver = webdriver.Chrome(executable_path=self.driver_path)
+        except Exception as e:
+            print('Error in setup_browser : ',e)
+        
         # self.driver = webdriver.Safari()
         # self.driver = webdriver.Chrome()
         # self.driver = webdriver.Firefox()

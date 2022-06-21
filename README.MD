@@ -7,6 +7,7 @@ This program use selenium for do testing from a **Google Chrome** the input are 
 |attemp |# attempt|
 |success| **true :** if the attempt was successfully **false:** failed|  
 
+docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:latest
 ## Requirements :
 Install GoogleChome : https://www.google.com/intl/es/chrome/?brand=YTUH&gclid=CjwKCAjwqauVBhBGEiwAXOepkfUnBVw4AppW-XZuRIT7FHBEPbyAr_0LXqwrL10zT9Fi0_CMgwLg5RoCe9IQAvD_BwE&gclsrc=aw.ds
 
